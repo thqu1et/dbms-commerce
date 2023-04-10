@@ -1,0 +1,29 @@
+create table stuff (
+  id INT primary key,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  speciality VARCHAR(14),
+  salary INT,
+  phone_number VARCHAR(50)
+);
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (1, 'Adey', 'Filippyev', 'cashier', 226088, '121-203-6079');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (2, 'Marylynne', 'Ruskin', 'admin', 197658, '986-720-2648');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (3, 'Quinlan', 'Hesse', 'shop-assistant', 239081, '678-661-7793');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (4, 'Inglis', 'Storrock', 'cashier', 59746, '838-650-0450');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (5, 'Devinne', 'O''Caine', 'shop-assistant', 144881, '431-281-4853');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (6, 'Sherwynd', 'Marquand', 'shop-assistant', 139305, '801-740-6779');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (7, 'James', 'Elcock', 'admin', 237609, '792-448-5496');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (8, 'Marja', 'Chooter', 'loader', 193876, '144-473-7363');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (9, 'Sandye', 'Blesdill', 'loader', 133604, '960-345-6640');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (10, 'Dulcia', 'Weir', 'shop-assistant', 232718, '652-920-8361');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (11, 'Peter', 'Colloff', 'cashier', 232404, '340-840-3332');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (12, 'Karlene', 'Revance', 'cook', 236741, '638-998-5044');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (13, 'Cinda', 'Matthaus', 'cashier', 187799, '875-161-7972');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (14, 'Ann-marie', 'Kierans', 'cashier', 239682, '543-406-4791');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (15, 'Rowena', 'Boodell', 'loader', 232710, '269-397-9587');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (16, 'Sharline', 'Meas', 'shop-assistant', 247160, '441-752-5977');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (17, 'Thedrick', 'Lewin', 'shop-assistant', 129722, '925-432-6334');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (18, 'Pyotr', 'Tithacott', 'cashier', 109692, '335-812-1581');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (19, 'Ashlen', 'Garvan', 'cashier', 207163, '539-870-8717');
+insert into stuff (id, first_name, last_name, speciality, salary, phone_number) values (20, 'Des', 'Morrieson', 'admin', 129460, '587-422-6059');
+

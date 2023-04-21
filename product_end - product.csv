@@ -1,0 +1,76 @@
+product_id,product_name,product_block,product_price,provider_id
+16,ham,A,404,1
+10,beef,A,342,4
+64,pork,A,793,10
+25,horsemeat,A,973,2
+48,mutton,A,570,5
+74,sausages,A,338,2
+17,steak,A,856,10
+9,salmon,A,362,1
+38,mackerel,A,762,10
+12,herring,A,831,6
+41,chicken,A,946,9
+31,goose,A,864,10
+69,turkey,A,853,4
+62,tuna,A,508,3
+23,ice cream,B,978,7
+61,milk,B,375,9
+44,cottage cheese,B,552,3
+6,cheese,B,303,4
+14,kefir,B,481,9
+34,yogurt,B,970,6
+37,condensed milk,B,979,4
+3,sour cream,B,562,1
+59,butter,B,362,6
+1,cream,B,402,10
+72,kurt,B,330,10
+60,bread,C,450,2
+49,long loaf,C,457,2
+56,baguette,C,546,9
+27,bun,C,325,3
+33,pretzel,C,742,10
+57,cookie,C,601,2
+35,cake,C,901,3
+26,donut,C,414,2
+39,pie,C,740,9
+4,samsa,C,842,9
+45,cheburek,C,747,3
+75,pancakes,C,929,7
+13,cheesecake,C,588,5
+29,apple,D,578,8
+22,orange,D,409,1
+15,manderin,D,734,4
+63,pear,D,663,6
+70,a pineapple,D,729,10
+19,tomato,D,947,2
+2,cabbage,D,540,5
+28,carrot,D,317,4
+58,onion,D,319,10
+40,potato,D,493,8
+21,salad,D,722,6
+42,asparagus,D,757,7
+68,mushrooms,D,515,1
+51,banana,D,582,4
+43,grapefruit,D,559,7
+20,mango,D,425,9
+67,avocado,D,476,2
+7,pepper,D,556,4
+18,bell pepper,D,869,9
+52,coconut,D,937,5
+50,cola,E,827,7
+46,pepsi,E,712,5
+66,fanta,E,327,10
+30,sprite,E,445,4
+11,jameson,E,829,8
+5,absolute,E,806,10
+36,dada,E,389,2
+8,dr.peper,E,734,4
+73,ice tea,E,647,9
+32,natahtari,E,670,3
+47,vine,E,640,8
+71,vodka,E,845,10
+65,whiskey,E,689,7
+53,rom,E,590,5
+24,water,E,706,7
+55,milkshake,E,494,4
+54,good,E,716,6

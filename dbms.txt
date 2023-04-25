@@ -1,0 +1,12 @@
+create or replace trigger pay_trigger
+before update on cards
+for each row
+declare 
+    check_balance number;
+begin 
+    select payment_sum into check_balance from payment where payment_id = :new.payment_id;    if :new.cards_balance > check_balance then 
+        :new.cards_balance := :new.cards_balance - check_balance ;        	DBMS_OUTPUT.PUT_LINE('Accepted');
+    end if; 
+   IF :new.cards_balance < check_balance THEN
+      RAISE_APPLICATION_ERROR(-20001, 'Transaction amount does not match balance');    END IF;
+end;

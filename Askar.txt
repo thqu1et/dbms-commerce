@@ -52,7 +52,19 @@ END;
 
 //
 
+This PL/SQL code block creates a stored procedure named "group_by_info" that retrieves and outputs product category information.
 
+The procedure uses a cursor named "products_info" to retrieve data from two tables named "PRODUCT_END" and "TYPE_END". The cursor selects two columns, "product_block" from the "PRODUCT_END" table and "type_block" from the "TYPE_END" table.
+
+The SELECT statement also contains a WHERE clause that joins the two tables on the "product_block" and "type_block" columns, filtering the results to only include matching rows.
+
+The GROUP BY clause groups the resulting rows by "product_block" and "type_block" columns.
+
+Inside the procedure, the dbms_output.put_line() procedure is used to output the string "Product Category" to the console.
+
+A FOR loop is used to iterate through the rows returned by the cursor, and for each row, the dbms_output.put_line() procedure is called to output the "type_block" value to the console.
+
+Overall, this procedure retrieves and outputs product category information by joining two tables, grouping the results, and outputting the results using the dbms_output.put_line() procedure.
 
 //
 
@@ -73,7 +85,15 @@ end;
 
 //
 
+The above code block is a PL/SQL code that creates a stored function named "count_products" that retrieves the number of products stored in a table named "product_end" and returns the count as a number.
 
+The function begins by declaring a local variable named "num_products" of type number.
+
+The SELECT statement inside the function selects the count of all rows in the "product_end" table using the COUNT(*) function and stores the result into the "num_products" variable using the INTO clause.
+
+Finally, the function returns the value of the "num_products" variable using the RETURN statement.
+
+Overall, this function can be used to retrieve the number of products stored in the "product_end" table in a PL/SQL program or as a part of an SQL statement.
 
 //
 

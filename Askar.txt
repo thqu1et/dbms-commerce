@@ -50,8 +50,38 @@ BEGIN
    END IF;  
 END;
 
+//
+
+
 
 //
 
+create or replace procedure group_by_info is
+cursor products_info is 
+Select p.product_block , s.type_block  
+from PRODUCT_END p ,TYPE_END s 
+where p.product_block = s.type_block
+group by p.product_block , s.type_block;
+begin 
+dbms_output.put_line('Product Category ');
+for product_cat in products_info loop
+dbms_output.put_line(product_cat.type_block);
+end loop;
+end;
+
+//
+
+//
+
+
+
+//
+
+create or replace function count_products return number as 
+num_products number;
+begin 
+select count(*) into num_products from product_end;
+return num_products;
+end;
 
 //

@@ -1,0 +1,24 @@
+This trigger is designed to be fired before an update on the "cards" table. It checks the balance of the payment associated with the card being updated and ensures that the payment amount is not greater than the card's balance. If the payment amount is greater, the trigger subtracts the payment amount from the card's balance and outputs "Accepted" using the DBMS_OUTPUT.PUT_LINE function. If the payment amount is less than the card's balance, it raises an application error with the message "Transaction amount does not match balance".
+
+However, there are a few improvements that could be made to this trigger. First, it's a good practice to explicitly specify the column names in the SELECT statement rather than using "SELECT *". This can help prevent issues in case the table schema changes in the future.
+
+Second, it would be a good idea to add some additional error handling code to catch any unexpected errors that may occur during the execution of the trigger. For example, if there is an error during the SELECT statement, the trigger will raise a runtime error. To handle this, we can add an EXCEPTION block to catch any errors and log them using DBMS_OUTPUT.PUT_LINE or some other mechanism.
+
+Finally, it's worth noting that the use of DBMS_OUTPUT.PUT_LINE is not ideal in a trigger, as triggers are often executed within the context of a larger transaction and DBMS_OUTPUT.PUT_LINE output may not be visible outside the trigger. Instead, consider using a logging table or some other mechanism to record the trigger's output.
+
+//
+
+create or replace trigger pay_trigger
+before update on cards
+for each row
+declare 
+    check_balance number;
+begin 
+    select payment_sum into check_balance from payment where payment_id = :new.payment_id;    if :new.cards_balance > check_balance then 
+        :new.cards_balance := :new.cards_balance - check_balance ;        	DBMS_OUTPUT.PUT_LINE('Accepted');
+    end if; 
+   IF :new.cards_balance < check_balance THEN
+      RAISE_APPLICATION_ERROR(-20001, 'Transaction amount does not match balance');    END IF;
+end;
+
+//

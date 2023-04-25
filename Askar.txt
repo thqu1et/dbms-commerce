@@ -22,3 +22,36 @@ begin
 end;
 
 //
+
+The above code block is a PL/SQL anonymous block that updates the salary of all the staff members in a table named "staff" and then checks whether any rows have been affected by the update statement.
+
+The first line of code declares a variable "total_rows" of type number(2) to store the number of rows affected by the update statement.
+
+The second line of code updates the "salary" column of all rows in the "staff" table by adding 500 to the current value.
+
+The IF statement checks whether any rows have been affected by the update statement. If no rows have been affected, it outputs "no staff selected" using the dbms_output.put_line() procedure.
+
+If rows have been affected, the "total_rows" variable is assigned the number of rows affected by the update statement using the sql%rowcount attribute. The number of rows affected is then outputted using the dbms_output.put_line() procedure.
+
+Overall, this PL/SQL block updates the salaries of all staff members and then provides feedback on whether any rows were updated or not.
+
+//
+
+DECLARE  
+   total_rows number(2); 
+BEGIN 
+   UPDATE staff 
+   SET salary = salary + 500; 
+   IF sql%notfound THEN 
+      dbms_output.put_line('no staff selected'); 
+   ELSIF sql%found THEN 
+      total_rows := sql%rowcount;
+      dbms_output.put_line( total_rows || ' staff selected '); 
+   END IF;  
+END;
+
+
+//
+
+
+//

@@ -1,4 +1,4 @@
-payment_id,staff_id,payment_sum,payment_date
+order_id,staff_id,payment_sum,payment_date
 1,19,24658,4/16/2023
 2,17,10520,4/17/2023
 3,20,32909,4/17/2023
